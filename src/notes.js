@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const mdTemplate = fs.readFileSync(path.join(__dirname, "export-highlights-md.handlebars")).toString();
-const htmlTemplate = fs.readFileSync(path.join(__dirname, "export-highlights-html.handlebars")).toString();
+const mdHighlightsTemplate = fs.readFileSync(path.join(__dirname, "export-highlights-md.handlebars")).toString();
+const mdNotesTemplate = fs.readFileSync(path.join(__dirname, "export-notes-md.handlebars")).toString();
+const htmlHighlightsTemplate = fs.readFileSync(path.join(__dirname, "export-highlights-html.handlebars")).toString();
 const handlebars = require("handlebars");
 
 const fileInputOutputOptions = [
@@ -22,31 +23,31 @@ const loadNotes = (command) => {
   return JSON.parse(fs.readFileSync(command.input.value));
 }
 
-const notesConvert = (command) => {
-  const notes = loadNotes(command);
+const convertNotes = (command, options) => {
+  const notes = loadNotes(options);
   const title = notes.title;
   const author = notes.authors;
-  const template = command.format && command.format.value === "html" ?
-    htmlTemplate
-    : mdTemplate;
+  const template =
+    command.convert
+      ? options.format && options.format.value === "html"
+        ? htmlHighlightsTemplate
+        : mdHighlightsTemplate
+      : mdNotesTemplate;
   const formatter = handlebars.compile(template);
   formattedHighlights = formatter({
     highlights: notes.highlights,
     title,
     author
   })
-  fs.writeFileSync(command.output.value, formattedHighlights)
-}
-
-const notesExtractNotes = (command) => {
-
+  fs.writeFileSync(options.output.value, formattedHighlights)
 }
 
 const notes = (commands) => {
+
   if (commands.convert) {
-    notesConvert(commands.convert);
+    convertNotes(commands, commands.convert);
   } else if (commands.extract) {
-    notesExtractNotes(commands.extract)
+    convertNotes(commands, commands.extract)
   }
 }
 
