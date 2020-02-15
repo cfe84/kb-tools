@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>{{author}} - {{title}}</title>
+</head>
+
+<body>
+  <h1>{{title}}, {{author}}</h1>
+  <div>
+    {{#each highlights}}
+
+
+    <p>
+      <a href="#{{location.value}}" name="{{location.value}}">Location: {{location.value}}</a>
+      <br />
+      &gt; {{text}}<br />
+      &gt;<br />
+      &gt; ~ {{../title}}, {{../author}}<br /> {{#if note}}
+      <br />
+      {{note}}{{/if}}
+    </p>
+
+    {{/each}}
+  </div>
+</body>
+
+</html>

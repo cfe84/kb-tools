@@ -1,0 +1,23 @@
+{
+  "name": "kb-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfe84/kb-tools.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cfe84/kb-tools/issues"
+  },
+  "homepage": "https://github.com/cfe84/kb-tools#readme",
+  "dependencies": {
+    "handlebars": "^4.7.3",
+    "yaclip": "^1.1.1"
+  }
+}

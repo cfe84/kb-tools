@@ -1,0 +1,547 @@
+{
+  "asin": "B00B8USS14",
+  "title": "The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition",
+  "authors": "Frederick P. Brooks Jr.",
+  "highlights": [
+    {
+      "text": "is a program. It is complete in itself, ready to be run by the author on the system on which it was developed. That is the thing commonly produced in garages,",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=261",
+        "value": 261
+      },
+      "note": null
+    },
+    {
+      "text": "As a rule of thumb, I estimate that a programming product costs at least three times as much as a debugged program with the same function.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=272",
+        "value": 272
+      },
+      "note": null
+    },
+    {
+      "text": "First is the sheer joy of making things.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=284",
+        "value": 284
+      },
+      "note": null
+    },
+    {
+      "text": "Fourth is the joy of always learning,",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=292",
+        "value": 292
+      },
+      "note": null
+    },
+    {
+      "text": "The programmer, like the poet, works only slightly removed from pure thought-stuff.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=294",
+        "value": 294
+      },
+      "note": null
+    },
+    {
+      "text": "Human beings are not accustomed to being perfect, and few areas of human activity demand it. Adjusting to the requirement for perfection is, I think, the most difficult part of learning to program.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=304",
+        "value": 304
+      },
+      "note": null
+    },
+    {
+      "text": "One rarely controls the circumstances of his work, or even its goal. In management terms, one's authority is not sufficient for his responsibility.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=307",
+        "value": 307
+      },
+      "note": null
+    },
+    {
+      "text": "In practice, actual (as opposed to formal) authority is acquired from the very momentum of accomplishment.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=309",
+        "value": 309
+      },
+      "note": null
+    },
+    {
+      "text": "they reflect an unvoiced assumption which is quite untrue, i.e., that all will go well.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=332",
+        "value": 332
+      },
+      "note": null
+    },
+    {
+      "text": "estimating techniques fallaciously confuse effort with progress,",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=333",
+        "value": 333
+      },
+      "note": null
+    },
+    {
+      "text": "software managers often lack the courteous stubbornness of Antoine's chef.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=334",
+        "value": 334
+      },
+      "note": null
+    },
+    {
+      "text": "Techniques proven and routine in other engineering disciplines are considered radical innovations in software engineering.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=336",
+        "value": 336
+      },
+      "note": null
+    },
+    {
+      "text": "when schedule slippage is recognized, the natural (and traditional) response is to add manpower. Like dousing a fire with gasoline, this makes matters worse, much worse.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=337",
+        "value": 337
+      },
+      "note": null
+    },
+    {
+      "text": "All programmers are optimists.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=341",
+        "value": 341
+      },
+      "note": null
+    },
+    {
+      "text": "the incompletenesses and inconsistencies of our ideas become clear only during implementation.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=352",
+        "value": 352
+      },
+      "note": null
+    },
+    {
+      "text": "Cost does indeed vary as the product of the number of men and the number of months. Progress does not. Hence the man-month as a unit for measuring the size of a job is a dangerous and deceptive myth.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=366",
+        "value": 366
+      },
+      "note": null
+    },
+    {
+      "text": "Men and months are interchangeable commodities only when a task can be partitioned among many workers with no communication among them",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=368",
+        "value": 368
+      },
+      "note": null
+    },
+    {
+      "text": "When a task cannot be partitioned because of sequential constraints, the application of more effort has no effect on the schedule (Fig. 2.2). The bearing of a child takes nine months, no matter how many women are assigned.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=372",
+        "value": 372
+      },
+      "note": null
+    },
+    {
+      "text": "communication effort is great, and it quickly dominates the decrease in individual task time brought about by partitioning. Adding more men then lengthens, not shortens, the schedule.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=391",
+        "value": 391
+      },
+      "note": null
+    },
+    {
+      "text": "No parts of the schedule are so thoroughly affected by sequential constraints as component debugging and system test.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=394",
+        "value": 394
+      },
+      "note": null
+    },
+    {
+      "text": "1/3 planning 1/6 coding 1/4 component test and early system test 1/4 system test, all components in hand.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=398",
+        "value": 398
+      },
+      "note": null
+    },
+    {
+      "text": "The half of the schedule devoted to debugging of completed code is much larger than normal. 3. The part that is easy to estimate, i.e., coding, is given only one-sixth of the schedule.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=402",
+        "value": 402
+      },
+      "note": null
+    },
+    {
+      "text": "An omelette, promised in two minutes, may appear to be progressing nicely. But when it has not set in two minutes, the customer has two choices—wait or eat it raw.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=415",
+        "value": 415
+      },
+      "note": null
+    },
+    {
+      "text": "false scheduling to match the patron's desired date is much more common in our discipline than elsewhere in engineering.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=419",
+        "value": 419
+      },
+      "note": null
+    },
+    {
+      "text": "Consider the regenerative effects,",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=448",
+        "value": 448
+      },
+      "note": null
+    },
+    {
+      "text": "will require training in the task by one of the experienced",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=449",
+        "value": 449
+      },
+      "note": null
+    },
+    {
+      "text": "Oversimplifying outrageously, we state Brooks's Law: Adding manpower to a late software project makes it later.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=464",
+        "value": 464
+      },
+      "note": null
+    },
+    {
+      "text": "Within just this group the ratios between best and worst performances averaged about 10:1 on productivity measurements and an amazing 5:1 on program speed and space measurements! In short the $20,000/year programmer may well be 10 times as productive as the $10,000/year one. The converse may be true, too. The data showed no correlation whatsoever between experience and performance. (I doubt if that is universally true.)",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=480",
+        "value": 480
+      },
+      "note": null
+    },
+    {
+      "text": "if a 200-man project has 25 managers who are the most competent and experienced programmers, fire the 175 troops and put the managers back to programming.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=487",
+        "value": 487
+      },
+      "note": null
+    },
+    {
+      "text": "for large systems one wants a way to bring considerable manpower to bear,",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=503",
+        "value": 503
+      },
+      "note": null
+    },
+    {
+      "text": "instead of each member cutting away on the problem, one does the cutting and the others give him every support that will enhance his effectiveness and productivity.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=507",
+        "value": 507
+      },
+      "note": null
+    },
+    {
+      "text": "the surgeon must be sole judge of the adequacy of the service available to him.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=542",
+        "value": 542
+      },
+      "note": null
+    },
+    {
+      "text": "a toolsmith, responsible for ensuring this adequacy of the basic service and for constructing, maintaining, and upgrading special tools—mostly",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=542",
+        "value": 542
+      },
+      "note": null
+    },
+    {
+      "text": "language lawyer",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=552",
+        "value": 552
+      },
+      "note": null
+    },
+    {
+      "text": "differences of judgment are settled by the surgeon unilaterally.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=565",
+        "value": 565
+      },
+      "note": null
+    },
+    {
+      "text": "most programming systems reflect conceptual disunity far worse than that of cathedrals. Usually this arises not from a serial succession of master designers, but from the separation of design into many tasks done by many men.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=598",
+        "value": 598
+      },
+      "note": null
+    },
+    {
+      "text": "With modern programming systems this gain does exceed the cost, but in recent years the ratio of gain to cost seems to have fallen as more and more complex functions have been added.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=614",
+        "value": 614
+      },
+      "note": null
+    },
+    {
+      "text": "Conceptual integrity in turn dictates that the design must proceed from one mind, or from a very small number of agreeing resonant minds.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=630",
+        "value": 630
+      },
+      "note": null
+    },
+    {
+      "text": "By the architecture of a system, I mean the complete and detailed specification of the user interface.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=636",
+        "value": 636
+      },
+      "note": null
+    },
+    {
+      "text": "A quick answer is to refrain from hiring implementers until the specifications are complete. This is what is done when a building is constructed.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=699",
+        "value": 699
+      },
+      "note": null
+    },
+    {
+      "text": "Conceptual integrity does require that a system reflect a single philosophy and that the specification as seen by the user flow from a few minds.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=715",
+        "value": 715
+      },
+      "note": null
+    },
+    {
+      "text": "sympathetic communication between architect and builder.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=725",
+        "value": 725
+      },
+      "note": null
+    },
+    {
+      "text": "architect has two possible answers when confronted with an estimate that is too high: cut the design or challenge the estimate by suggesting cheaper implementations.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=734",
+        "value": 734
+      },
+      "note": null
+    },
+    {
+      "text": "the architect suggests, not dictates;",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=738",
+        "value": 738
+      },
+      "note": null
+    },
+    {
+      "text": "builder will counter by suggesting changes to the architecture.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=742",
+        "value": 742
+      },
+      "note": "discipline is interactive - design gets refined base on propositions of implementer, estimate gets refined based on architecture concessions"
+    },
+    {
+      "text": "Second-System Effect",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=744",
+        "value": 744
+      },
+      "note": "the second system effect : architect restraint features on v1 to keepit simple, then v2 gets overdesigned ith useless features"
+    },
+    {
+      "text": "general tendency is to over-design the second system, using all the ideas and frills that were cautiously sidetracked on the first one.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=751",
+        "value": 751
+      },
+      "note": null
+    },
+    {
+      "text": "The manual is the external specification of the product. It describes and prescribes every detail of what the user sees. As such, it is the chief product of the architect.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=805",
+        "value": 805
+      },
+      "note": "manual is external sec for what the user sees. it is the main produc of the architect"
+    },
+    {
+      "text": "The architect must always be prepared to show an implementation for any feature he describes, but he must not attempt to dictate the implementation.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=810",
+        "value": 810
+      },
+      "note": "arhitect should be able to propose an implementation, but shouldn't propose one"
+    },
+    {
+      "text": "\"Never go to sea with two chronometers; take one or three.\"",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=833",
+        "value": 833
+      },
+      "note": null
+    },
+    {
+      "text": "The purpose of organization is to reduce the amount of communication and coordination necessary;",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1016",
+        "value": 1016
+      },
+      "note": null
+    },
+    {
+      "text": "Experience is a dear teacher, but fools will learn at no other. —POOR RICHARD'S ALMANAC",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1088",
+        "value": 1088
+      },
+      "note": null
+    },
+    {
+      "text": "coding is only one-sixth or so of the problem, and errors in its estimate or in the ratios could lead to ridiculous results.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1092",
+        "value": 1092
+      },
+      "note": null
+    },
+    {
+      "text": "Extrapolation of times for the hundred-yard dash shows that a man can run a mile in under three minutes.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1098",
+        "value": 1098
+      },
+      "note": "Time required by programming tasks is non linear. The time you need to build a tas"
+    },
+    {
+      "text": "effort = (constant) x (number of instructions)1.5.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1105",
+        "value": 1105
+      },
+      "note": null
+    },
+    {
+      "text": "teams were only realizing 50 percent of the working week as actual programming and debugging time.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1115",
+        "value": 1115
+      },
+      "note": null
+    },
+    {
+      "text": "To the new manager, fresh from operating as a craftsman himself, these seem an unmitigated nuisance, an unnecessary distraction, and a white tide that threatens to engulf him. And indeed, most of them are exactly that.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1250",
+        "value": 1250
+      },
+      "note": null
+    },
+    {
+      "text": "It is common sense to take a method and try it. If it fails, admit it frankly and try another. But above all, try something. —FRANKLIN D. ROOSEVELT",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1319",
+        "value": 1319
+      },
+      "note": null
+    },
+    {
+      "text": "Cosgrove advocates treating all plans, milestones, and schedules as tentative, so as to facilitate change.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1359",
+        "value": 1359
+      },
+      "note": null
+    },
+    {
+      "text": "Systems program building is an entropy-decreasing process, hence inherently metastable. Program maintenance is an entropy-increasing process, and even its most skillful execution only delays the subsidence of the system into unfixable obsolescence.",
+      "isNoteOnly": false,
+      "location": {
+        "url": "kindle://book?action=open&asin=B00B8USS14&location=1428",
+        "value": 1428
+      },
+      "note": null
+    }
+  ]
+}
