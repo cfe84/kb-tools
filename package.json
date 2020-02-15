@@ -1,7 +1,7 @@
 {
   "name": "kb-tools",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tools for knowledge base",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/cfe84/kb-tools.git"
   },
-  "author": "",
-  "license": "ISC",
+  "bin": {
+    "kb": "bin/kb"
+  },
+  "author": "Charles Feval",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cfe84/kb-tools/issues"
   },
