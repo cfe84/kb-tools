@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const parse5 = require("parse5");
+const csvparse = require('csv-parse/lib/sync')
 const mdHighlightsTemplate = fs.readFileSync(path.join(__dirname, "export-highlights-md.handlebars")).toString();
 const mdNotesTemplate = fs.readFileSync(path.join(__dirname, "export-notes-md.handlebars")).toString();
 const htmlHighlightsTemplate = fs.readFileSync(path.join(__dirname, "export-highlights-html.handlebars")).toString();
@@ -15,6 +16,7 @@ const OPTIONS_INPUT_FORMAT = "input-format";
 const OPTIONS_OUTPUT_FORMAT = "output-format";
 
 const FORMAT_MD = "markdown";
+const FORMAT_CSV = "csv";
 const FORMAT_HTML = "html";
 const FORMAT_JSON = "json";
 const FORMAT_CLIPPINGS = "clippings";
@@ -80,6 +82,27 @@ const loadKindleClippings = (file) => {
     .split("==========")
     .map(parseClippingsNote)
   return notes;
+}
+
+const loadOreillyCsvExport = (file) => {
+  const locationRegex = RegExp("(\\d+)", "m");
+  const content = fs.readFileSync(file).toString();
+  const records = csvparse(content, {
+    columns: true,
+    skip_empty_lines: true
+  })
+  const authors = records[0]["Authors"];
+  const title = records[0]["Book Title"];
+  const highlights = records.map(record => ({
+    text: record.Highlight,
+    note: record["Personal Note"],
+    location: { value: locationRegex.exec(record["Highlight URL"])[1] }
+  }))
+  return {
+    authors,
+    title,
+    highlights
+  }
 }
 
 const loadKindleHtmlExport = (file) => {
@@ -170,6 +193,8 @@ const loadNotes = (command) => {
     return loadKindleClippings(file);
   else if (format === FORMAT_HTML || (!format && file.endsWith(".html")))
     return loadKindleHtmlExport(file)
+  else if (format === FORMAT_CSV || (!format && file.endsWith(".csv")))
+    return loadOreillyCsvExport(file)
   else
     throw (Error("Unknown input file format"))
 }
@@ -184,6 +209,7 @@ const convertNotes = (command, options) => {
         ? htmlHighlightsTemplate
         : mdHighlightsTemplate
       : mdNotesTemplate;
+  handlebars.registerHelper("quote", (text) => text.split("\n").map(line => `> ${line}`).join("\n"))
   const formatter = handlebars.compile(template);
   formattedHighlights = formatter({
     highlights: notes.highlights,
