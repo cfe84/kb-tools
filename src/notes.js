@@ -209,7 +209,7 @@ const convertNotes = (command, options) => {
         ? htmlHighlightsTemplate
         : mdHighlightsTemplate
       : mdNotesTemplate;
-  handlebars.registerHelper("quote", (text) => text.split("\n").map(line => `> ${line}`).join("\n"))
+  handlebars.registerHelper("quote", (text) => text ? text.split("\n").map(line => `> ${line}`).join("\n") : "")
   const formatter = handlebars.compile(template);
   formattedHighlights = formatter({
     highlights: notes.highlights,
