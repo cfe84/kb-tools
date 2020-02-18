@@ -1,15 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 
-const COMMAND_LIST_TODO = "list";
+const COMMAND_LIST_TODO = "todo";
 const SUBCOMMAND_PATH = "path"
 
 const subcommands = [
   { name: SUBCOMMAND_PATH, alias: "p", type: String }
 ]
 
-const todoOptions = [
-  { name: COMMAND_LIST_TODO, alias: "l", type: Boolean, subcommands },
+const checkOptions = [
+  { name: COMMAND_LIST_TODO, alias: "t", type: Boolean, subcommands },
 ]
 
 const todoRegex = RegExp("{t(?:odo)?(?::|\s)*([^}]+)}", "gi");
@@ -45,7 +45,7 @@ const listTodo = (options) => {
   console.log(todos.map((todo) => `${todo.text}: ${todo.file}`).join("\n"));
 }
 
-const todo = (command) => {
+const check = (command) => {
   if (command[COMMAND_LIST_TODO]) {
     listTodo(command[COMMAND_LIST_TODO])
   } else {
@@ -54,6 +54,6 @@ const todo = (command) => {
 }
 
 module.exports = {
-  command: todo,
-  options: todoOptions
+  command: check,
+  options: checkOptions
 }
