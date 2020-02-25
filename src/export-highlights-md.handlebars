@@ -2,19 +2,19 @@
 title: "{{title}}"
 ---
 
-# {{title}}
+# {{{title}}}
 
-_By {{author}}_
+_By {{{author}}}_
 
 {{#each highlights}}
 
-<a href="#{{location.value}}" name="{{location.value}}">Location: {{location.value}}</a>
+<a href="#{{{location.value}}}" name="{{{location.value}}}">Location: {{{location.value}}}</a>
 
 {{{quote text}}}
 >
-> ~~ _{{../title}}, {{../author}}_ {{#if note}}
+> ~~ _{{{../title}}}, {{{../author}}}_ {{#if note}}
 
-{{note}}{{/if}}{{#unless @last}}
+{{{note}}}{{/if}}{{#unless @last}}
 
 ---
 {{/unless}}{{/each}}
