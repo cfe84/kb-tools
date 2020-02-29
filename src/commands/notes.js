@@ -1,10 +1,11 @@
 const fs = require("fs");
+const help = require("./help")
 const path = require("path");
 const parse5 = require("parse5");
 const csvparse = require('csv-parse/lib/sync')
-const mdHighlightsTemplate = fs.readFileSync(path.join(__dirname, "export-highlights-md.handlebars")).toString();
-const mdNotesTemplate = fs.readFileSync(path.join(__dirname, "export-notes-md.handlebars")).toString();
-const htmlHighlightsTemplate = fs.readFileSync(path.join(__dirname, "export-highlights-html.handlebars")).toString();
+const mdHighlightsTemplate = fs.readFileSync(path.join(__dirname, "notes-templates", "export-highlights-md.handlebars")).toString();
+const mdNotesTemplate = fs.readFileSync(path.join(__dirname, "notes-templates", "export-notes-md.handlebars")).toString();
+const htmlHighlightsTemplate = fs.readFileSync(path.join(__dirname, "notes-templates", "export-highlights-html.handlebars")).toString();
 const handlebars = require("handlebars");
 
 const COMMAND_EXTRACT_HIGHLIGHTS = "extract-highlights";
@@ -29,9 +30,11 @@ const fileInputOutputOptions = [
 ]
 
 const notesOptions = [
-  { name: COMMAND_EXTRACT_HIGHLIGHTS, alias: "h", type: Boolean, subcommands: fileInputOutputOptions },
-  { name: COMMAND_EXTRACT_NOTES, alias: "n", type: Boolean, subcommands: fileInputOutputOptions },
+  { name: COMMAND_EXTRACT_HIGHLIGHTS, alias: "h", type: Boolean, subcommands: fileInputOutputOptions, typeLabel: "-i file.html -o file.md", description: "Extract highlights (for references)" },
+  { name: COMMAND_EXTRACT_NOTES, alias: "n", type: Boolean, subcommands: fileInputOutputOptions, typeLabel: "-i file.html -o file.md", description: "Extract only notes" },
 ]
+
+const notesCommand = { name: "notes", alias: "n", type: Boolean, multiple: false, subcommands: notesOptions };
 
 const loadJSONNotes = (file) => {
   return JSON.parse(fs.readFileSync(file));
@@ -225,10 +228,12 @@ const notes = (commands) => {
     convertNotes(COMMAND_EXTRACT_HIGHLIGHTS, commands[COMMAND_EXTRACT_HIGHLIGHTS]);
   } else if (commands[COMMAND_EXTRACT_NOTES]) {
     convertNotes(COMMAND_EXTRACT_NOTES, commands[COMMAND_EXTRACT_NOTES])
+  } else {
+    help.displayHelp("Convert exported notes", notesOptions)
   }
 }
 
 module.exports = {
-  command: notes,
-  options: notesOptions
+  exec: notes,
+  command: notesCommand
 }

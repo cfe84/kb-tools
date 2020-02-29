@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const help = require("./help")
 
 const COMMAND_LIST_TODO = "todo";
 const COMMAND_LINKS = "links";
@@ -10,9 +11,10 @@ const subcommands = [
 ]
 
 const checkOptions = [
-  { name: COMMAND_LIST_TODO, alias: "t", type: Boolean, subcommands },
-  { name: COMMAND_LINKS, alias: "l", type: Boolean, subcommands },
+  { name: COMMAND_LIST_TODO, alias: "t", type: Boolean, subcommands, description: "Search for todos (in format \\{t*\\})" },
+  { name: COMMAND_LINKS, alias: "l", type: Boolean, subcommands, description: "Check links" },
 ]
+const checkCommand = { name: "check", alias: "c", type: Boolean, multiple: false, subcommands: checkOptions };
 
 const todoRegex = RegExp("{t(?:odo)?(?::|\s)*([^}]+)}", "gi");
 
@@ -78,11 +80,11 @@ const check = (command) => {
   } else if (command[COMMAND_LINKS]) {
     checkLinks(command[COMMAND_LINKS])
   } else {
-    throw Error("Unknown todo command")
+    help.displayHelp("Check your kb", checkOptions)
   }
 }
 
 module.exports = {
-  command: check,
-  options: checkOptions
+  exec: check,
+  command: checkCommand
 }
