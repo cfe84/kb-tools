@@ -6,6 +6,15 @@ title: "{{title}}"
 
 _By {{{author}}}_
 
+## notes
+
+{{#each highlights}}{{#if note}}
+{{{note}}}<sup><a href="#{{location.value}}">{{location.value}}</a></sup>
+
+{{/if}}{{/each}}
+
+## highlights
+
 {{#each highlights}}
 
 <a href="#{{{location.value}}}" name="{{{location.value}}}">Location: {{{location.value}}}</a>
