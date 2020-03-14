@@ -88,7 +88,7 @@ function filterMdFilesWithInternalLinks(files) {
 }
 
 const displayProblem = (message, file, link) => {
-  console.log(`${message}. File: ${file.filePath}. Link name: ${link.name}. Link: ${link.link}`)
+  console.log(`${message}. File: ${file.filePath} | Link name: ${link.name} | Link: ${link.link}`)
 }
 
 
