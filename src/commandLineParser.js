@@ -1,6 +1,8 @@
 const { parseCommandLine } = require("yaclip");
 const { options, commands } = require("./commands/commandIndex");
 
+const fs = require("fs");
+const path = require("path");
 
 const getCommand = () => {
   try {
