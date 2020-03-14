@@ -70,7 +70,7 @@ function getAllFiles(options) {
   return files;
 }
 
-function filterMdFilesWithInternalLinks(files) {
+function filterMd(files) {
   const linksRegex = RegExp("\\[([^\\]]*)\\]\\(([^)]*)\\)", "g");
   return files.filter((file) => file.file.endsWith(".md"))
     .map((file) => {
@@ -84,16 +84,21 @@ function filterMdFilesWithInternalLinks(files) {
       file.links = links;
       return file;
     })
-    .filter(file => file.links.length > 0);
 }
 
-const displayProblem = (message, file, link) => {
-  console.log(`${message}. File: ${file.filePath} | Link name: ${link.name} | Link: ${link.link}`)
+const displayProblem = (message, file, link = undefined) => {
+  console.log(`${message}. File: ${file.filePath}${link ? ` | Link name: ${link.name} | Link: ${link.link}` : ""}`)
 }
 
 
 function resolveLink(files, file, link) {
-  const linkPathRegex = new RegExp("(\\w+)(?:#([\\w\\d]*))$")
+  let linkFilePath = getLinkPath(link, file);
+  let find = files.find(file => file.relativePath === linkFilePath);
+  return find
+}
+
+function getLinkPath(link, file) {
+  const linkPathRegex = new RegExp("(\\w+)(?:#([\\w\\d]*))$");
   let linkFilePath = link.link.replace(linkPathRegex, "$1");
   if (!linkFilePath.startsWith("/")) {
     if (linkFilePath.startsWith("./")) {
@@ -103,13 +108,20 @@ function resolveLink(files, file, link) {
     const filePath = file.relativePath.substring(0, filePathIndex);
     linkFilePath = filePath + linkFilePath;
   }
-  let find = files.find(file => file.relativePath === linkFilePath);
-  return find
+  return linkFilePath;
 }
+
 
 const checkLinks = (options) => {
   const files = getAllFiles(options);
-  const mdFilesWithLinks = filterMdFilesWithInternalLinks(files);
+  const mdFiles = filterMd(files)
+  const mdFilesWithLinks = mdFiles
+    .filter(file => file.links.length > 0);
+
+  mdFiles
+    .filter(file => file.links.length === 0)
+    .filter(file => !mdFilesWithLinks.find(mdFile => !!mdFile.links.find(link => getLinkPath(link, mdFile) === file.relativePath)))
+    .forEach(file => displayProblem(`WARNING: card is orphaned (has no link and is not linked)`, file))
 
   mdFilesWithLinks.map(mdFile => {
     mdFile.links
@@ -120,7 +132,7 @@ const checkLinks = (options) => {
 
         const correspondingFileIndex = resolveLink(files, mdFile, link);
         if (!correspondingFileIndex) {
-          displayProblem(`ERROR: file not found`, mdFile, link)
+          displayProblem(`ERROR: card not found`, mdFile, link)
         }
       })
   })
